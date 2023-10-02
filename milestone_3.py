@@ -1,23 +1,36 @@
 #%%
-# Write code that constantly asks user for a letter & validate it
+# ask_for_input function
+# Constantly asks user for a letter & validates it
 
-while True:
-    guess = input('Please enter a single letter here: ')
+def ask_for_input():
+    '''
+    This function validates whether or not thes input is a single alphabetical character.
+    Also, uses the check_guess(guess) function to validate if the guessed letter is in the secret word.
+    '''
+    while True:
+        guess = input('Please enter a single letter here: ')
 
-    if len(guess) == 1 and guess.isalpha():
-        print(f'You have guessed the letter: {guess}.')
-        break
-    else:
-        print('Invalid letter. Please, enter a single alphabetical character.')
+        if len(guess) == 1 and guess.isalpha():
+            print(f'You have guessed the letter: {guess}.')
+            break
+        else:
+            print('Invalid letter. Please, enter a single alphabetical character.')
+
+    return check_guess(guess)
 # %%
-# Check if the letter guessed is in the secret word
+ask_for_input()
+# %%
+# Create an example for secret word
 
-# Secret word
 secret_word = 'apple'
 # %%
 # check_guess function
+# Check if the letter guessed is in the secret word
+
 def check_guess(guess):
-    '''This function will take the guessed letter as an argument and check if the letter is in the word.'''
+    '''
+    This function takes the guessed letter as an argument and checks if the letter is in the secret word.
+    '''
    
     # Convert guess to lowercase
     guess_lowercase = guess.lower()

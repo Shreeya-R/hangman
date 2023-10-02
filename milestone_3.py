@@ -14,12 +14,6 @@ while True:
 
 # Secret word
 secret_word = 'apple'
-secret_word.find(guess)
-
-if secret_word.find(guess) >= 0:
-    print(f'Good guess! {guess} is in the word.')
-else:
-    print(f'Sorry, {guess} is not in the word. Try again.')
 # %%
 # check_guess function
 def check_guess(guess):
@@ -27,15 +21,14 @@ def check_guess(guess):
    
     # Convert guess to lowercase
     guess_lowercase = guess.lower()
-    print(guess_lowercase)
 
+    # Check if the guess is in the secret word
+    secret_word.find(guess_lowercase)
 
-    secret_word.find(guess)
-
-    if secret_word.find(guess) >= 0:
-        print(f'Good guess! {guess} is in the word.')
+    if secret_word.find(guess_lowercase) >= 0:
+        print(f'Good guess! {guess_lowercase} is in the word.')
     else:
-        print(f'Sorry, {guess} is not in the word. Try again.')
+        print(f'Sorry, {guess_lowercase} is not in the word. Try again.')
 
 # %%
 check_guess(guess)

@@ -1,3 +1,7 @@
+# %%
+# Create an example for secret word
+
+secret_word = 'apple'
 #%%
 # ask_for_input function
 # Constantly asks user for a letter & validates it
@@ -19,10 +23,6 @@ def ask_for_input():
     return check_guess(guess)
 # %%
 ask_for_input()
-# %%
-# Create an example for secret word
-
-secret_word = 'apple'
 # %%
 # check_guess function
 # Check if the letter guessed is in the secret word

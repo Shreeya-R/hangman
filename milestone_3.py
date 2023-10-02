@@ -10,3 +10,14 @@ while True:
     else:
         print('Invalid letter. Please, enter a single alphabetical character.')
 # %%
+# Check if the letter guessed is in the secret word
+
+# Secret word
+secret_word = 'apple'
+secret_word.find(guess)
+
+if secret_word.find(guess) >= 0:
+    print(f'Good guess! {guess} is in the word.')
+else:
+    print(f'Sorry, {guess} is not in the word. Try again.')
+# %%

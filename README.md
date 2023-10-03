@@ -8,5 +8,7 @@ Hangman is a classic game in which a player thinks of a word and the other playe
     i. milestone_3.py module
     - explain the check_guess function
     - explain the ask_for_input function
+    ii. milestone_4.py module
+    - explain Hangman class
 4. File Structure of the Project
 5. License Information

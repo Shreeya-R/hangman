@@ -38,4 +38,4 @@ def ask_for_input():
 
     return check_guess(guess)
 # %%
-ask_for_input()
+# ask_for_input()

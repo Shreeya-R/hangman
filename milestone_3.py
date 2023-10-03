@@ -1,7 +1,3 @@
-# %%
-# Create an example for secret word
-
-secret_word = 'apple'
 #%%
 # ask_for_input function
 # Constantly asks user for a letter & validates it
@@ -36,9 +32,9 @@ def check_guess(guess):
     guess_lowercase = guess.lower()
 
     # Check if the guess is in the secret word
-    secret_word.find(guess_lowercase)
+    word.find(guess_lowercase)
 
-    if secret_word.find(guess_lowercase) >= 0:
+    if word.find(guess_lowercase) >= 0:
         print(f'Good guess! {guess_lowercase} is in the word.')
     else:
         print(f'Sorry, {guess_lowercase} is not in the word. Try again.')

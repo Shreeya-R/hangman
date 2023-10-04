@@ -3,7 +3,6 @@
 import random
 from milestone_3 import check_guess
 from milestone_3 import ask_for_input
-
 #%%
 # Create Hangman class
 
@@ -20,10 +19,13 @@ class Hangman:
 
 #%%
 # Initialising the following attributes
-# word
+# word & word_list
 
 word_list = ['Pineapple', 'Mango', 'Cherry', 'Apple', 'Strawberry']
 word = random.choice(word_list)
+print(word)
+#%%
+ask_for_input(word)
 #%%
 # word_guessed
 # A list of the word with _ for each letter not yet guessed.
@@ -36,10 +38,15 @@ print(word_guessed)
 
 # Now need to replace _ with the letter guessed if it is in the word
 for letter in word:
-    if guess == letter:
-        letter_position = word_list.index(guess)
-        print(letter_position)
+    while True:
+        guess = input('Please enter a single letter here: ')
 
+        if guess == letter:
+            letter_position = word.index(guess)
+            print(letter_position)
+            word_guessed[letter_position] = guess
+        else: 
+            print(f'{guess} is not in the word. Try again')
 # %%
 # num_letters
 # The number of unique letters in the word that have not been guessed yet.

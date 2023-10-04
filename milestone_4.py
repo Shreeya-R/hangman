@@ -54,6 +54,34 @@ class Hangman:
                 print('Invalid letter. Please, enter a single alphabetical character.')
 
         return check_guess(guess, word)
+    
+    # word_guessed
+    # A list of the word with _ for each letter not yet guessed.
+    def create_word_guessed():
+        '''
+        This function
+        '''
+        word_guessed = [ ]
+
+        for letter in word:
+            word_guessed == word_guessed.append('_')
+        print(word_guessed)
+
+        # get guess value using ask_for_input function
+
+        # Now need to replace _ with the letter guessed if it is in the word
+        while True: 
+            # guess = input('Please enter a single letter here: ')
+
+            ask_for_input(word)
+
+            for letter in word:
+                if guess_lowercase == letter:
+                    letter_position = word.index(guess_lowercase)
+                    print(letter_position)
+                    word_guessed[letter_position] = guess_lowercase
+                else: 
+                    print(f'{guess_lowercase} is not in the word. Try again')
 #%%
 # Initialising the following attributes
 # word & word_list

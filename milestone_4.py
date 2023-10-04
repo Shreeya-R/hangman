@@ -63,16 +63,18 @@ class Hangman:
         This function
         '''
         word_guessed = [ ]
+        word_letters = [ ]
         word_lowercase = word.lower()
 
-        for letter in word:
+        for letter in word_lowercase:
             word_guessed == word_guessed.append('_')
+            word_letters == word_letters.append(letter)
         print(word_guessed)
 
         # get guess value using ask_for_input function
 
         # Now need to replace _ with the letter guessed if it is in the word
-        while True: 
+        while word_guessed != word_letters: 
             # guess = input('Please enter a single letter here: ')
 
             guess = input('Please enter a single letter here: ')

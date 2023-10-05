@@ -1,8 +1,6 @@
 #%%
-# Import random module & functions from milestone_3.py into script
+# Import random module into script
 import random
-from milestone_3 import check_guess
-from milestone_3 import ask_for_input
 #%%
 # Create Hangman class
 
@@ -19,9 +17,9 @@ class Hangman:
 
         self.word = random.choice(word_list)
 
-        self.word_guessed = word_guessed
+        self.word_guessed = [ ]
         self.num_letters = num_letters
-        self.list_of_guesses = list_of_guesses 
+        self.list_of_guesses = [ ] 
 
     def check_guess(self, guess, word):
         '''
@@ -36,8 +34,6 @@ class Hangman:
 
         if word.find(guess_lowercase) >= 0:
             print(f'Good guess! {guess_lowercase} is in the word.')
-        else:
-            print(f'Sorry, {guess_lowercase} is not in the word. Try again.')
 
     def ask_for_input(self, word):
         '''
@@ -47,13 +43,14 @@ class Hangman:
         while True:
             guess = input('Please enter a single letter here: ')
 
-            if len(guess) == 1 and guess.isalpha():
-                print(f'You have guessed the letter: {guess}.')
-                break
+            if len(guess) != 1 and guess.isalpha() == False:
+                print(f'Invalid letter. Please enter a single alphabetical character.')
+            elif list_of_guesses.index(guess) >= 0:
+                print(f'You already tried that letter!')
             else:
-                print('Invalid letter. Please, enter a single alphabetical character.')
-
-        return check_guess(guess, word)
+                list_of_guesses == list_of_guesses.append(guess)
+    
+    return check_guess(guess, word)
     
     #%%
     # word_guessed
@@ -96,11 +93,18 @@ class Hangman:
 word_list = ['Pineapple', 'Mango', 'Cherry', 'Apple', 'Strawberry']
 word = random.choice(word_list)
 print(word)
-#%%
-ask_for_input(word)
 # %%
 # num_letters
 # The number of unique letters in the word that have not been guessed yet.
+
+def create_num_letters():
+    word_lowercase = word.lower()
+    word_letters = [ ]
+    
+    for letter in word_lowercase:
+        word_letters == word_letters.append(letter)
+        num_letters = len(set(word_letters))
+    return num_letters
 # %%
-create_word_guessed()
+create_num_letters()
 # %%

@@ -1,4 +1,6 @@
 #%%
+import random
+#%%
 # word_guessed
 # A list of the word with _ for each letter not yet guessed.
 def create_word_guessed():
@@ -46,7 +48,7 @@ def create_num_letters():
     return num_letters
 # %%
 create_num_letters()
-create_word_guessed()
+# create_word_guessed()
 # %%
 word_list = ['Pineapple', 'Mango', 'Cherry', 'Apple', 'Strawberry']
 word = random.choice(word_list)

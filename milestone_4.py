@@ -63,15 +63,22 @@ class Hangman:
 
             if len(guess) != 1 and guess.isalpha() == False:
                 print(f'Invalid letter. Please enter a single alphabetical character.')
-           # elif list_of_guesses.index(guess) >= 0:
-            #    print(f'You already tried that letter!')
+            elif self.list_of_guesses.count(guess) > 0:
+                print(f'You already tried that letter!')
             else:
-             #  list_of_guesses == list_of_guesses.append(guess)
-                return self.check_guess(guess)
+               self.list_of_guesses == self.list_of_guesses.append(guess)
+               print(self.list_of_guesses)
+               return self.check_guess(guess)
 #%%
 # Checking if the Hangman class attributes and methods work:
 example = Hangman(['Pineapple', 'Mango', 'Cherry', 'Apple', 'Strawberry'])
+#%%
 example.ask_for_input()
 # %%
 example.word
+# %%
+example.list_of_guesses
+
+# %%
+example.list_of_guesses.count('h') 
 # %%

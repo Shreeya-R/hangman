@@ -2,7 +2,7 @@
 # check_guess function
 # Check if the letter guessed is in the secret word
 
-def check_guess(guess):
+def check_guess(guess, word):
     '''
     This function takes the guessed letter as an argument and checks if the letter is in the secret word.
     '''
@@ -22,7 +22,7 @@ def check_guess(guess):
 # ask_for_input function
 # Constantly asks user for a letter & validates it
 
-def ask_for_input():
+def ask_for_input(word):
     '''
     This function validates whether or not thes input is a single alphabetical character.
     Also, uses the check_guess(guess) function to validate if the guessed letter is in the secret word.
@@ -36,6 +36,6 @@ def ask_for_input():
         else:
             print('Invalid letter. Please, enter a single alphabetical character.')
 
-    return check_guess(guess)
+    return check_guess(guess, word)
 # %%
 # ask_for_input()

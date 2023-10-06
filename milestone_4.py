@@ -25,9 +25,9 @@ class Hangman:
         self.num_lives = num_lives
 
         self.word = random.choice(self.word_list)
-       # self.num_letters = set(self.word_guessed)
+        self.num_letters = len(set(self.word))
 
-       # self.word_guessed = [ ]
+        self.word_guessed = ['_']*len(self.word)
         self.list_of_guesses = [ ] 
 
     def check_guess(self, guess):
@@ -41,14 +41,24 @@ class Hangman:
    
         # Convert guess to lowercase
         guess_lowercase = guess.lower()
+        word_lowercase = self.word.lower()
 
-        # Check if the guess is in the secret word
-        self.word.find(guess_lowercase)
-
-        if self.word.find(guess_lowercase) >= 0:
+        # Use find function as will return -1 if the letter is not in the word
+        if word_lowercase.find(guess_lowercase) >= 0:
             print(f'Good guess! {guess_lowercase} is in the word.')
+
+            for letter in word_lowercase:
+                if letter == guess:
+                    letter_position = word_lowercase.find(guess_lowercase)
+                    self.word_guessed[letter_position] = guess_lowercase
+                print(self.word_guessed)
+            
+            self.num_letters -= 1
+            return self.num_letters
         else:
-            print(f'Sorry, {guess_lowercase} is not in the word. Try again.')
+            self.num_lives -= 1
+            print(f'Sorry, {guess_lowercase} is not in the word.')
+            print(f'You have {self.num_lives} lives left.')
 
     def ask_for_input(self):
         '''
@@ -72,13 +82,16 @@ class Hangman:
 #%%
 # Checking if the Hangman class attributes and methods work:
 example = Hangman(['Pineapple', 'Mango', 'Cherry', 'Apple', 'Strawberry'])
-#%%
-example.ask_for_input()
 # %%
 example.word
 # %%
 example.list_of_guesses
-
 # %%
-example.list_of_guesses.count('h') 
+example.num_letters
+# %%
+example.word_guessed
+# %%
+example.num_lives
+#%%
+example.ask_for_input()
 # %%

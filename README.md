@@ -2,11 +2,11 @@
 Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts. This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it.
 
 ## Contents
-1. The Project
-2. Installation Instructions
-3. Usage Instructions
-4. File Structure of the Project
-5. License Information
+1. [The Project](https://github.com/shhrreeyyaa/hangman#1-the-project)
+2. [Installation Instructions](https://github.com/shhrreeyyaa/hangman#2-installation-instructions)
+3. [Usage Instructions](https://github.com/shhrreeyyaa/hangman#3-usage-instructions)
+4. [File Structure of the Project](https://github.com/shhrreeyyaa/hangman#4-file-structure-of-the-project)
+5. [License Information](https://github.com/shhrreeyyaa/hangman#5-license-information)
 
 ## 1. The Project
 i. Decsription of the Project

@@ -33,10 +33,14 @@ class Hangman:
     def check_guess(self, guess):
         '''
         This function checks if a letter is contained in the word.
+
+        The purpose of this function is to take the guessed letter as an argument and check if the letter is in the randomly chosen word.
+        There are two options for the output of this function:
+        1. Tells the user the guess is good.
+        2. Tells the user the guess is not in the word. Provides the number of lives the user has left.
         
         Returns:
-            str: a string stating that the guess is in the word
-        The purpose of this function is to take the guessed letter and word as arguments and check if the letter is in the word provided.
+            str: a string for whether or not the guess in contained in the word.
         '''
    
         # Convert guess to lowercase
@@ -64,9 +68,12 @@ class Hangman:
         '''
         This function validates whether or not the input is a single alphabetical character.
 
-        Returns:
+        The purpose of this function is to ensure that the value of the input is valid for the Hangman class.
+        The check_guess() function in used within this function to validate if the guessed letter is in the secret word. 
+        Therefore, there is not need to run both these functions, the ask_for_input() function encompasses both.
 
-        Also, uses the check_guess(guess) function to validate if the guessed letter is in the secret word.
+        Returns:
+            str: a string for whether or not the guess in contained in the word.
         '''
         while True:
             guess = input('Please enter a single letter here: ')

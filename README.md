@@ -9,13 +9,15 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 5. [License Information](https://github.com/shhrreeyyaa/hangman#5-license-information)
 
 ## 1. The Project
-i. Decsription of the Project
-ii. Aim of the Project
-iii. What I've learned from the Project
+1. Description of the Project
+2. Aim of the Project
+3. What I've learned from the Project
 
 ## 2. Installation Instructions
-i. import random
-ii. from milestone_4.py
+Include screenshots of code examples for this
+1. import random
+![import random code](image.png)
+2. from milestone_4.py
     - import check_guess
     - import ask_for_input
 

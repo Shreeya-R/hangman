@@ -16,7 +16,6 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 ## 2. Installation Instructions
 Include screenshots of code examples for this
 1. import random
-![import random code](image.png)
 2. from milestone_4.py
     - import check_guess
     - import ask_for_input

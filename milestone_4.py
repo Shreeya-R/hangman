@@ -15,7 +15,6 @@ class Hangman:
         num_lives (int): the number of lives a player has at the start of the game.
         word_list (list): a list of words that the guessed word will be chosen from.
         list_of_guesses (list): a list of guesses that have already been tried.
-        
     '''
     def __init__(self, word_list, num_lives=5):
         '''
@@ -38,6 +37,9 @@ class Hangman:
         There are two options for the output of this function:
         1. Tells the user the guess is good.
         2. Tells the user the guess is not in the word. Provides the number of lives the user has left.
+
+        Parameters:
+            guess
         
         Returns:
             str: a string for whether or not the guess in contained in the word.
@@ -84,7 +86,7 @@ class Hangman:
                 print(f'You already tried that letter!')
             else:
                self.list_of_guesses == self.list_of_guesses.append(guess)
-               print(self.list_of_guesses)
+               print(f'You now have {self.list_of_guesses} letters left to guess!')
                return self.check_guess(guess)
 #%%
 # Checking if the Hangman class attributes and methods work:

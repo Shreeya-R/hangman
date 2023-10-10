@@ -86,4 +86,34 @@ class Hangman:
             else:
                self.list_of_guesses == self.list_of_guesses.append(guess)
                print(f'You now have {self.list_of_guesses} letters left to guess!')
-               return self.check_guess(guess)
+               self.check_guess(guess)
+#%%
+# Create a function called play_game
+def play_game(word_list):
+    '''
+    This function allows you to play the game Hangman using the Hangman class.
+
+    The purpose...
+
+    Parameters:
+        
+    '''
+    num_lives = 5
+
+    # Create instance for Hangman class called game
+    game = Hangman(word_list, num_lives)
+
+    while True:
+        if game.num_lives == 0:
+            # Means game has ended and the user has lost
+            print('You lost!')
+        elif game.num_lives > 0:
+            # We want to continue the game in this case
+            game.ask_for_input()
+        elif game.num_lives != 0 and game.num_letters <= 0:
+            # This means user has won the game
+            print('Congratulations. You won the game!')
+# %%
+word_list = ['Pineapple', 'Cherry', 'Mango', 'Strawberry', 'Banana']
+play_game(word_list)
+# %%

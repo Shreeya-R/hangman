@@ -54,7 +54,7 @@ class Hangman:
 
             for letter in word_lowercase:
                 if letter == guess:
-                    letter_position = word_lowercase.find(guess_lowercase)
+                    letter_position = word_lowercase.index(guess_lowercase)
                     self.word_guessed[letter_position] = guess_lowercase
                 print(self.word_guessed)
             
@@ -85,7 +85,7 @@ class Hangman:
                 print(f'You already tried that letter!')
             else:
                self.list_of_guesses == self.list_of_guesses.append(guess)
-               print(f'You now have {self.list_of_guesses} letters left to guess!')
+               print(f'You have guessed the letters {self.list_of_guesses} so far!')
                self.check_guess(guess)
 #%%
 # Create a function called play_game
@@ -96,7 +96,7 @@ def play_game(word_list):
     The purpose...
 
     Parameters:
-        
+
     '''
     num_lives = 5
 

@@ -121,6 +121,7 @@ def play_game(word_list):
             print('Congratulations. You won the game!')
             break
 # %%
-word_list = ['Pineapple', 'Mango', 'Cherry', 'Apple', 'Strawberry']
-play_game(word_list)
+if __name__ == '__main__':
+    word_list = ['Pineapple', 'Mango', 'Cherry', 'Apple', 'Strawberry']
+    play_game(word_list)
 # %%

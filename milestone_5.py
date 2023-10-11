@@ -23,7 +23,7 @@ class Hangman:
         self.num_lives = num_lives
 
         self.word = random.choice(self.word_list)
-        self.num_letters = len(set(self.word))
+        self.num_letters = len(set(self.word.lower()))
 
         self.word_guessed = ['_']*len(self.word)
         self.list_of_guesses = [ ] 
@@ -60,6 +60,7 @@ class Hangman:
             print(self.word_guessed)
 
             self.num_letters -= 1
+            print(f'You have {self.num_letters} more unique letters left to guess!')
             return self.num_letters
         else:
             print(self.word_guessed)

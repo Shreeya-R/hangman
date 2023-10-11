@@ -16,14 +16,23 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 ## 2. Installation Instructions
 Include screenshots of code examples for this
 1. import random
-2. from milestone_4.py
-    - import check_guess
-    - import ask_for_input
+2. from milestone_5.py
+    - import Hangman 
+    - import play_game
 
 ## 3. Usage Instructions
- i. milestone_4.py module
+ i. milestone_5.py module
     - explain Hangman class
+    - explain check_guess
+    - explain ask_for_input
+    - explain play_game
 
 ## 4. File Structure of the Project
+1) milestone_2
+2) milestone_3
+3) milestone_4
+4) trial_functions
+5) milestone_5
 
 ## 5. License Information
+- unknown

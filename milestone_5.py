@@ -52,9 +52,10 @@ class Hangman:
         if word_lowercase.find(guess_lowercase) >= 0:
             print(f'Good guess! {guess_lowercase} is in the word.')
 
-            for letter in word_lowercase:
-                if letter == guess:
-                    letter_position = word_lowercase.index(guess_lowercase)
+            for i,j in enumerate(word_lowercase):
+                if j == guess_lowercase:
+                    # letter_position = word_lowercase.index(guess_lowercase)
+                    letter_position = i
                     self.word_guessed[letter_position] = guess_lowercase
             print(self.word_guessed)
 
@@ -119,6 +120,6 @@ def play_game(word_list):
             print('Congratulations. You won the game!')
             break
 # %%
-word_list = ['Mango']
+word_list = ['Pineapple', 'Mango', 'Cherry', 'Apple', 'Strawberry']
 play_game(word_list)
 # %%

@@ -56,11 +56,12 @@ class Hangman:
                 if letter == guess:
                     letter_position = word_lowercase.index(guess_lowercase)
                     self.word_guessed[letter_position] = guess_lowercase
-                print(self.word_guessed)
+            print(self.word_guessed)
             
             self.num_letters -= 1
             return self.num_letters
         else:
+            print(self.word_guessed)
             self.num_lives -= 1
             print(f'Sorry, {guess_lowercase} is not in the word.')
             print(f'You have {self.num_lives} lives left.')
@@ -107,6 +108,8 @@ def play_game(word_list):
         if game.num_lives == 0:
             # Means game has ended and the user has lost
             print('You lost!')
+            # tried to add break, but it doesn't seem to stop the code running
+            break
         elif game.num_lives > 0:
             # We want to continue the game in this case
             game.ask_for_input()

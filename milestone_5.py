@@ -116,6 +116,7 @@ def play_game(word_list):
         elif game.num_lives != 0 and game.num_letters <= 0:
             # This means user has won the game
             print('Congratulations. You won the game!')
+            break
 # %%
 word_list = ['Pineapple', 'Cherry', 'Mango', 'Strawberry', 'Banana']
 play_game(word_list)

@@ -57,7 +57,7 @@ class Hangman:
                     letter_position = word_lowercase.index(guess_lowercase)
                     self.word_guessed[letter_position] = guess_lowercase
             print(self.word_guessed)
-            
+
             self.num_letters -= 1
             return self.num_letters
         else:
@@ -82,12 +82,15 @@ class Hangman:
 
             if len(guess) != 1 and guess.isalpha() == False:
                 print(f'Invalid letter. Please enter a single alphabetical character.')
-            elif self.list_of_guesses.count(guess) > 0:
+            elif guess in self.list_of_guesses:
                 print(f'You already tried that letter!')
             else:
-               self.list_of_guesses == self.list_of_guesses.append(guess)
-               print(f'You have guessed the letters {self.list_of_guesses} so far!')
-               self.check_guess(guess)
+              # self.list_of_guesses == self.list_of_guesses.append(guess)
+                print(f'You have guessed the letters {self.list_of_guesses} so far!')
+                self.check_guess(guess)
+                self.list_of_guesses == self.list_of_guesses.append(guess)
+                break
+            print('test')
 #%%
 # Create a function called play_game
 def play_game(word_list):
@@ -113,11 +116,11 @@ def play_game(word_list):
         elif game.num_lives > 0:
             # We want to continue the game in this case
             game.ask_for_input()
-        elif game.num_lives != 0 and game.num_letters <= 0:
+        else:
             # This means user has won the game
             print('Congratulations. You won the game!')
             break
 # %%
-word_list = ['Pineapple', 'Cherry', 'Mango', 'Strawberry', 'Banana']
+word_list = ['Mango']
 play_game(word_list)
 # %%

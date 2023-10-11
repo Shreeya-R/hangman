@@ -85,12 +85,10 @@ class Hangman:
             elif guess in self.list_of_guesses:
                 print(f'You already tried that letter!')
             else:
-              # self.list_of_guesses == self.list_of_guesses.append(guess)
                 print(f'You have guessed the letters {self.list_of_guesses} so far!')
                 self.check_guess(guess)
                 self.list_of_guesses == self.list_of_guesses.append(guess)
-                break
-            print('test')
+            break
 #%%
 # Create a function called play_game
 def play_game(word_list):
@@ -113,10 +111,10 @@ def play_game(word_list):
             print('You lost!')
             # tried to add break, but it doesn't seem to stop the code running
             break
-        elif game.num_lives > 0:
+        elif game.num_lives > 0 and game.num_letters > 0:
             # We want to continue the game in this case
             game.ask_for_input()
-        else:
+        elif game.num_lives > 0 and game.num_letters == 0:
             # This means user has won the game
             print('Congratulations. You won the game!')
             break

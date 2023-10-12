@@ -33,12 +33,10 @@ class Hangman:
         This function checks if a letter is contained in the word.
 
         The purpose of this function is to take the guessed letter as an argument and check if the letter is in the randomly chosen word.
-        There are two options for the output of this function:
-        1. Tells the user the guess is good.
-        2. Tells the user the guess is not in the word. Provides the number of lives the user has left.
+        The ask_for_input function must be run for this code to work, as the argument 'guess' is derived from the ask_for_input function.
 
-        Parameters:
-            guess
+        Args:
+            guess (str): the single letter input guessed by the user.
         
         Returns:
             str: a string for whether or not the guess in contained in the word.
@@ -46,6 +44,8 @@ class Hangman:
    
         # Convert guess to lowercase
         guess_lowercase = guess.lower()
+
+        # Convert word to lowercase
         word_lowercase = self.word.lower()
 
         # Use find function as will return -1 if the letter is not in the word
@@ -54,7 +54,6 @@ class Hangman:
 
             for i,j in enumerate(word_lowercase):
                 if j == guess_lowercase:
-                    # letter_position = word_lowercase.index(guess_lowercase)
                     letter_position = i
                     self.word_guessed[letter_position] = guess_lowercase
             print(self.word_guessed)
@@ -73,8 +72,8 @@ class Hangman:
         This function validates whether or not the input is a single alphabetical character.
 
         The purpose of this function is to ensure that the value of the input is valid for the Hangman class.
-        The check_guess() function in used within this function to validate if the guessed letter is in the secret word. 
-        Therefore, there is not need to run both these functions, the ask_for_input() function encompasses both.
+        The check_guess function in used within this function to validate if the guessed letter is in the secret word. 
+        Therefore, there is not need to run both these functions, the ask_for_input function encompasses both.
 
         Returns:
             str: a string for whether or not the guess in contained in the word.
@@ -95,12 +94,16 @@ class Hangman:
 # Create a function called play_game
 def play_game(word_list):
     '''
-    This function allows you to play the game Hangman using the Hangman class.
+    This function plays the game Hangman using the Hangman class.
 
-    The purpose...
+    The purpose of this function is to implement the methods from the Hangman class and manipulate them in such a way that the game Hangman can be played.
+    Hangman involves a random word being chosen and the user has to guess what the word is by making single letter guesses.
 
-    Parameters:
+    Args:
+        word_list (list): is a list of words from which the function randomly chooses a word to be guessed.
 
+    Returns:
+        str: a string for whether or not the user won or lost the Hangman game.
     '''
     num_lives = 5
 

@@ -94,7 +94,7 @@ class Hangman:
 # Create a function called play_game
 def play_game(word_list):
     '''
-    This function plays the game Hangman using the Hangman class.
+    This function allows users to play the game Hangman by guessing a single letter each time.
 
     The purpose of this function is to implement the methods from the Hangman class and manipulate them in such a way that the game Hangman can be played.
     Hangman involves a random word being chosen and the user has to guess what the word is by making single letter guesses.

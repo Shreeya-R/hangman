@@ -9,9 +9,17 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 5. [License Information](https://github.com/shhrreeyyaa/hangman#5-license-information)
 
 ## 1. The Project
-1. Description of the Project
-2. Aim of the Project
-3. What I've learned from the Project
+### Description
+The concept of this project is to create a game, which allows users to guess a random word using single letter guesses. The game will stop once the word has been guessed correctly or when the the user has run out of lives.
+
+In order to achieve this, the Hangman Project required the construction of a class called Hangman and a function called play_game. The purpose of the Hangman class is to ensure that various attributes and methods are created and can be implemented into the final function play_game. The play_game function encompasses all the code required for the Hangman game to work, so that it can be played by a user through this single function. The game continues until the user guesses the word correctly or runs out of lives.
+
+### What I've Learned
+This Hangman Project has enabled me to nurture many skills in coding as well as deepen my overall Python knowledge.
+
+Through this project my knowledge of classes and how to manipulate functions has strengthened. The success of this project has been due to the thorough knowledge of how to use control loops and understanding python data types and their attributes. As a whole, I enjoyed compiling the code to ensure the functionality of the Hangman game and solving solutions to errors that occurred along the way.
+
+I can confidently say that this project has been a pleasure to work on and it has been a great starting point for my first ever github project.
 
 ## 2. Installation Instructions
 Include screenshots of code examples for this

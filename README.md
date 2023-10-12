@@ -22,20 +22,33 @@ Through this project my knowledge of classes and how to manipulate functions has
 I can confidently say that this project has been a pleasure to work on and it has been a great starting point for my first ever github project.
 
 ## 2. Installation Instructions
-To install the Hangman game, simply import the module milestone_5.py. By importing this module, one imports the random module, Hangman class and the play_game function. Additonally, if the module is called directly then the play_gmae function will automatically run upon importing.
+To install the Hangman game, simply import the module **milestone_5.py**. By importing this module, one imports the random module, Hangman class and the play_game function. Additonally, if the module is called directly then the play_gmae function will automatically run upon importing.
+![Alt text](carbon.png)
 
-![Importing Directly](image-3.png)
+Alternatively, one can import the entire **hangman folder** and import milestone_5.py separately. However, **milestone_5.py** does include if __name__ == '__main__', so the play_game function will not automatically run if the module is imported this way ie indirectly. In this case, the play_game function will need to be run after importing the module milestone_5.py.
 
-Alternatively, one can import the entire hangman folder and import milestone_5.py separately. However, milestone_5.py does include if __name__ == '__main__', so the play_game function will not automatically run if the module is imported this way ie indirectly. In this case, the play_game function will need to be run after importing the module milestone_5.py.
-
-![Importing Indirectly](image-2.png)
+![Alt text](carbon1.png)
 
 ## 3. Usage Instructions
- i. milestone_5.py module
-    - explain Hangman class
-    - explain check_guess
-    - explain ask_for_input
-    - explain play_game
+### play_game
+To play the Hangman game, simply run the function **play_game**. This will ask the user to continuously guess a single letter until the correct word is guessed or the user runs out of lives.
+
+### Hangman class
+This function requires the **Hangman class**, which contains the necessary attributes and methods that are vital for the play_game function to run. These methods include check_guess and ask_for_input, which we will look into in further detail below. 
+
+For further information on the **Hangman class**, use help(Hangman) after importing the class.
+
+### check_guess
+The **check_guess** method is vital to check if a single letter that has been guessed is contained within the word to be guessed. Moreover, it is important to note that this method alters the values of the attributes num_lives and num_letters based on the given input. 
+
+This method will not run unless the ask_for_input function is run first.
+
+For further information on the **check_guess**, use help(Hangman) after importing the Hangman class.
+
+### ask_for_input
+The **ask_for_input** method is key for the play_game function to run due to the parameter 'guess' being defined in this method.
+
+For further information on the **ask_for_input**, use help(Hangman) after importing the Hangman class.
 
 ## 4. File Structure of the Project
 1) milestone_2

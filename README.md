@@ -24,11 +24,11 @@ I can confidently say that this project has been a pleasure to work on and it ha
 ## 2. Installation Instructions
 To install the Hangman game, simply import the module milestone_5.py. By importing this module, one imports the random module, Hangman class and the play_game function. Additonally, if the module is called directly then the play_gmae function will automatically run upon importing.
 
-![Importing Directly](~/Downloads/carbon.png)
+![Importing Directly](image-3.png)
 
 Alternatively, one can import the entire hangman folder and import milestone_5.py separately. However, milestone_5.py does include if __name__ == '__main__', so the play_game function will not automatically run if the module is imported this way ie indirectly. In this case, the play_game function will need to be run after importing the module milestone_5.py.
 
-![Importing Indirectly](~/Downloads/carbon1.png)
+![Importing Indirectly](image-2.png)
 
 ## 3. Usage Instructions
  i. milestone_5.py module

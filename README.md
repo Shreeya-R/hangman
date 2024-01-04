@@ -6,7 +6,6 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 2. [Installation Instructions](https://github.com/shhrreeyyaa/hangman#2-installation-instructions)
 3. [Usage Instructions](https://github.com/shhrreeyyaa/hangman#3-usage-instructions)
 4. [File Structure of the Project](https://github.com/shhrreeyyaa/hangman#4-file-structure-of-the-project)
-5. [License Information](https://github.com/shhrreeyyaa/hangman#5-license-information)
 
 ## 1. The Project
 ### Description
@@ -56,6 +55,3 @@ For further information on the **ask_for_input**, use help(Hangman) after import
 
 ## 4. File Structure of the Project
 The only file of interest to the user in this project is the milesstone_5.py file. The rest of the files are simply for trial and error of functions and methods.
-
-## 5. License Information
-Unfortunately, I could not find details for this information.
